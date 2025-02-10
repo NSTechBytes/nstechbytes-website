@@ -8,9 +8,9 @@
 
 ## 📌 Features
 
-✅ **GitHub Dark Theme**
-✅ **Typing Effect in the Header**
-✅ **Glassmorphism UI with Neon Glow**
-✅ **Hover Animations & Smooth Transitions**
-✅ **SEO Optimized**
-✅ **Responsive & Mobile-Friendly**
+✅ **GitHub Dark Theme**.<br>
+✅ **Typing Effect in the Header**.<br>
+✅ **Glassmorphism UI with Neon Glow**.<br>
+✅ **Hover Animations & Smooth Transitions**.<br>
+✅ **SEO Optimized**.<br>
+✅ **Responsive & Mobile-Friendly**.<br>
