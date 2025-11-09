@@ -51,34 +51,34 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "RainSyntax",
-                description: "A powerful syntax highlighting tool for Rainmeter with real-time preview.",
-                tech: ["VS Code", "JavaScript", "Node.js"],
-                links: { github: "https://github.com/NSTechBytes/rainsyntax", live: "https://rainsyntax.pages.dev/" }
+                title: "HTML View",
+                description: "Preview and View HTML files inside VS Code with ease!",
+                tech: ["JavaScript", "VS Code API"],
+                links: { github: "https://github.com/NSTechBytes/html-view", live: "https://marketplace.visualstudio.com/items?itemName=NSTechBytes.html-view" }
               },
               {
-                title: "YourPalettes",
-                description: "Color palette generator with export options for various platforms.",
-                tech: ["React", "TypeScript", "TailwindCSS"],
-                links: { github: "https://github.com/NSTechBytes/yourpalettes-website", live: "https://yourpalettes.pages.dev/" }
+                title: "SimplePicker",
+                description: "A lightweight Windows Forms application for picking colors from your screen, with magnifier, color utilities, and global hotkey support.",
+                tech: ["C#", "NSIS"],
+                links: { github: "https://github.com/NSTechBytes/simple-picker", live: "https://simple-picker.pages.dev/" }
               },
               {
-                title: "YourServer",
-                description: "A lightweight server management tool with intuitive interface.",
-                tech: ["VS Code", "Node.js", "JavaScript"],
-                links: { github: "https://github.com/NSTechBytes/YourServer", live: "https://marketplace.visualstudio.com/items?itemName=NSTechBytes.yourserver" }
+                title: "WeatherX",
+                description: "A powerful Rainmeter plugin that provides real-time weather data, 7-day forecasts, hourly predictions, and location information using the free Open-Meteo API.",
+                tech: ["C#", "PowerShell"],
+                links: { github: "https://github.com/NSTechBytes/WeatherX", live: "https://github.com/NSTechBytes/WeatherX" }
               },
               {
-                title: "SVG Showcase",
-                description: "A powerful, elegant Electron-based SVG viewer and converter. Optimize, convert, and manage your SVG files with ease.",
-                tech: ["React", "TypeScript", "TailwindCSS"],
-                links: { github: "https://github.com/NSTechBytes/svg-showcase", live: "https://svgshowcase.pages.dev/" }
+                title: "FinalShot",
+                description: "A powerful Rainmeter plugin for capturing screenshots directly from your skins with beautiful themed notifications. Supports full-screen captures, predefined regions, custom selection, window capture, multi-monitor composition, and more.",
+                tech: ["C#", "PowerShell"],
+                links: { github: "https://github.com/NSTechBytes/FinalShot", live: "https://github.com/NSTechBytes/FinalShot" }
               },
               {
-                title: "BlurInput",
-                description: "Input field component with dynamic blur effects.",
-                tech: ["React", "CSS", "JavaScript"],
-                links: { github: "https://github.com/NSTechBytes/BlurInput", live: "https://github.com/NSTechBytes/BlurInput" }
+                title: "ShotCap",
+                description: "A powerful command-line screenshot capture tool for Windows. Written in C++ using the Windows API and GDI+, supports capturing screenshots from various sources with advanced features like DPI awareness, mouse pointer capture, and more.",
+                tech: ["C++", "C", "NSIS"],
+                links: { github: "https://github.com/NSTechBytes/ShotCap", live: "https://shotcap.pages.dev/" }
               }
             ].map((project, index) => (
               <motion.div
@@ -125,7 +125,7 @@ const Index = () => {
             >
               <h3 className="text-xl font-bold mb-4">Languages</h3>
               <div className="flex flex-wrap gap-2">
-                {["C", "C++", "C#", "Python", "Java", "JavaScript", "TypeScript", "HTML", "CSS", "Lua", "PowerShell"].map((lang) => (
+                {["C", "C++", "C#", "Python", "HTML", "CSS", "JavaScript", "TypeScript", "Lua", "PowerShell"].map((lang) => (
                   <span key={lang} className="text-sm px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
                     {lang}
                   </span>
@@ -139,7 +139,7 @@ const Index = () => {
             >
               <h3 className="text-xl font-bold mb-4">Frameworks & Tools</h3>
               <div className="flex flex-wrap gap-2">
-                {["React", "Node.js", "Electron", "VS Code API", "Git", "Docker", "Webpack", "TailwindCSS"].map((tool) => (
+                {["React", "Node.js", "VS Code API", "Git", "TailwindCSS", "Shadcn UI"].map((tool) => (
                   <span key={tool} className="text-sm px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
                     {tool}
                   </span>
@@ -153,7 +153,7 @@ const Index = () => {
             >
               <h3 className="text-xl font-bold mb-4">Development</h3>
               <div className="flex flex-wrap gap-2">
-                {["VS Code Extensions",  "Electron Apps", "Web Development", "Rainmeter Plugins"].map((dev) => (
+                {["VS Code Extensions", "Electron Apps", "Web Development", "Rainmeter Plugins", "Desktop Apps"].map((dev) => (
                   <span key={dev} className="text-sm px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
                     {dev}
                   </span>
