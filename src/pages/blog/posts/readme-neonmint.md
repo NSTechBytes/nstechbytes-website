@@ -1,8 +1,18 @@
-
-# NeonMint Template Documentation
-
-![neonmint](https://github.com/user-attachments/assets/ae539704-2292-492f-882c-c90595b34717)
-
+---
+layout: /src/layouts/MarkdownPostLayout.astro
+title: NeonMint Template Documentation
+author: Fernando López
+description: "NeonMint is a modern, minimalist template crafted for developers and digital creatives. Its dark-themed layout with mint green highlights delivers a sleek, elegant, and functional visual experience—perfect for portfolios, dashboards, or tech landing pages."
+image:
+  url: "/images/projects/neonmint.webp"
+  alt: "Screenshot of NeonMint, a modern and minimalist web template built with Astro and TailwindCSS. It displays various sections such as blog, portfolio, work experience, and Markdown guide, in both light and dark modes with mint green accents."
+pubDate: 2025-04-04
+tags:
+  [
+    "documentation", "portfolio", "web-development", "astro", "tailwindcss"
+  ]
+languages: ["astro", "javascript", "tailwind", "markdown"]
+---
 
 ## 🎯 Overview
 
@@ -37,10 +47,10 @@
         │   └── ProjectLayout.astro    # Projects page layout
         ├── 📁pages       # Site pages
         │   ├── about-me.md            # About-me page
-        │   ├── 📁blog   # All posts page
+        │   │   ├── 📁blog   # All posts page
         │   │   ├── index.astro        # Blog home page
         │   │   ├── 📁posts            # Blog posts
-        ├── │   ├── └── index.astro     # All posts page
+        ├── │   ├── └── index.astro     #All posts page
         │   │   ├── 📁tags             # Blog tags
         │   │   └── 📁techs            # Blog technologies
         │   ├── index.astro            # Home page
@@ -64,7 +74,7 @@
 
 ## 🛠️ Technology Stack
 
-- **Framework**: Astro v5.6.1
+- **Framework**: Astro v5.4.2
 - **UI Library**: Preact v10.26.2
 - **Styling**: TailwindCSS v4.0.8
 - **Icons**: astro-icon v1.1.5
@@ -98,36 +108,21 @@
 ## 🚀 Getting Started
 
 1. **📦 Installation**
-
-   ### 🚀**Astro Installation**
-   ```bash
-   npm create astro@latest -- --template EFEELE/neonmint
-   ```
-   or
-   ### 🔧**Manual Installation**
-   
-   #### Clone Repository
-   ```bash
-   git clone https://github.com/EFEELE/NeonMint.git
-   ```
-   #### Install Dependencies
    ```bash
    npm install
    ```
 
-  
-
-3. **⚡ Development**
+2. **⚡ Development**
    ```bash
    npm run dev
    ```
 
-4. **🏗️ Build**
+3. **🏗️ Build**
    ```bash
    npm run build
    ```
 
-5. **👀 Preview**
+4. **👀 Preview**
    ```bash
    npm run preview
    ```
@@ -174,29 +169,6 @@ If you encounter any issues during this process, try restarting the development 
 
 To verify that the new language has been added correctly, check the list of available technologies in the user interface after restarting the server.
 
----
-
-### 🧷 Favicon Setup
-
-To customize your site's favicon and web app icons, you can generate all the necessary variants using [favicon.io](https://favicon.io/favicon-converter/). Upload your logo or icon, and the tool will create a full set of optimized files for various devices and platforms.
-
-Place the generated files in the `📂 public` directory as follows:
-
-```bash
-📂 public
-├── 📄 android-chrome-192x192.png
-├── 📄 android-chrome-512x512.png
-├── 📄 apple-touch-icon.png
-├── 📄 favicon-16x16.png
-├── 📄 favicon-32x32.png
-├── 📄 favicon.ico
-└── 📄 site.webmanifest
-```
-
-> 💡 Don’t forget to update the contents of `site.webmanifest` to match your app’s name, description, and theme color for a complete PWA experience.
-
----
-
 ### 🎨 Styling
 
 - Use TailwindCSS classes for styling
@@ -218,15 +190,6 @@ The site is configured for deployment on Vercel, but can be deployed to any stat
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
-
-## 👥 Contributors  
-
-A huge thanks to all the amazing people who have contributed to this project!  
-Your time, effort, and ideas make this repository better every day. 💚  
-
-<a href="https://github.com/EFEELE/NeonMint/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=EFEELE/NeonMint" />
-</a>
 
 ## 📄 License
 

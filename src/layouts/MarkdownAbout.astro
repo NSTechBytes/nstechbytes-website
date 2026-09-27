@@ -1,0 +1,109 @@
+---
+import Layout from "./Layout.astro";
+import { Icon } from "astro-icon/components";
+import Heading from "../components/ui/Heading.astro";
+import Experience from "../components/portfolio/Experience.astro";
+import NavArticle from "../components/layout/NavArticle.astro";
+import Contact from "../components/portfolio/Contact.astro";
+import Tools from "../components/portfolio/Tools.astro";
+const { frontmatter } = Astro.props;
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((header) => {
+      header.classList.add("scroll-m-28");
+    });
+  });
+</script>
+
+<Layout
+  pageTitle={frontmatter.title}
+  description={frontmatter.description}
+  ogimage={frontmatter.image}
+>
+  <section
+    class="w-full px-8 mt-5 max-sm:px-4 py-4 flex flex-row justify-center gap-6"
+  >
+    <div class="w-64 max-xl:hidden"></div>
+
+    <article
+      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 max-sm:mt-0 px-14 max-md:px-10 max-sm:px-6 dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl"
+    >
+      <div class="w-full h-auto mb-4 mx-auto" id="#">
+        <div
+          class="transition-all justify-center w-full gap-8 max-md:gap-3 max-lg:gap-2 flex flex-col items-center z-0 relative dark:from-mint-950 dark:to-zinc-950"
+        >
+          <div class="aspect-square h-60 max-md:size-32">
+            <div
+              class="group-hover:scale-105 relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-full dark:p-[1.5px] p-[2px] transition-all duration-500"
+            >
+              <div
+                class="absolute inset-0 h-full w-full rounded-fullfrom-transparent to-riptide-500 dark:from-transparent f dark:to-mint-300 animate-rotate-border bg-conic/[from_var(--border-angle)]"
+              >
+              </div>
+              <div class="relative z-20 flex w-full rounded-full bg-mint-900">
+                <div
+                  class="w-full aspect-square rounded-full bg-[url(/images/efeeleprofile.webp)] bg-center bg-cover"
+                  aria-label="Photo of Fernando Aldair López Ponce (EFEELE) for the blog"
+                >
+                  <a
+                    href="/about-me"
+                    class="flex h-full w-full"
+                    aria-label="View about me page"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-col justify-center gap-4 max-md:gap-2">
+            <div class="text-center">
+              <Heading textGradient="Fernando López | EFEELE" />
+            </div>
+
+            <p
+              class="text-lg max-xl:text-base text-blacktext dark:text-gray-200 mb-0 leading-8 font-semibold"
+            >
+              <b
+                class="bg-linear-to-r from-riptide-400 to-mint-500 dark:to-mint-200 dark:from-riptide-300 text-transparent bg-clip-text"
+                >Frontend Developer</b
+              > with <b
+                class="bg-linear-to-r from-riptide-400 to-mint-500 dark:to-mint-200 dark:from-riptide-300 text-transparent bg-clip-text"
+                >8 years of experience</b
+              >, passionate about development, technology, and coffee that
+              sparks ideas. I love bringing digital projects to life. 🚀☕
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-4 items-center">
+        <Heading text="About" textGradient="me" />
+      </div>
+
+      <div class="markdown text-white" id="content">
+        <slot />
+      </div>
+    </article>
+    <NavArticle title={frontmatter.title} />
+  </section>
+  <section class="py-8 px-8 max-md:py-4 mb-4 scroll-m-16" id="experience">
+    <div class="flex flex-col gap-8 pt-8 max-w-4xl mx-auto">
+      <div class="flex gap-4 items-center justify-center">
+        <Icon class="text-3xl text-white" name="briefcase" />
+        <Heading text="Experience" textGradient="Work" level={2} />
+      </div>
+
+      <Experience />
+    </div>
+  </section>
+  <section class="py-8 px-8 max-md:py-4 mt-10 mb-20 scroll-m-16" id="sttack">
+    <div class="flex flex-col gap-8 max-w-3xl justify-center mx-auto">
+      <div class="flex gap-4 items-center justify-center">
+        <Icon class="text-3xl text-white" name="dashboard" />
+        <Heading text="Stack" textGradient="Technological" level={2} />
+      </div>
+      <Tools variant="center" />
+    </div>
+  </section>
+  <Contact />
+</Layout>

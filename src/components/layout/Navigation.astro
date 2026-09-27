@@ -1,0 +1,169 @@
+---
+import Social from "../ui/Social.astro";
+import { getCollection } from "astro:content";
+
+const [staticData] = await getCollection("staticData");
+const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
+
+const { items = [] }: { items: (keyof typeof menu)[] } = Astro.props as {
+  items: (keyof typeof menu)[];
+};
+
+const menu = {
+  about: { name: "About Me", path: "/about-me" },
+  blog: {
+    name: "Blog",
+    path: "/blog/",
+    dropdown: [{ name: "All Posts", path: "/blog/posts/" }],
+  },
+  home: { name: "Home", path: "/#home" },
+  experience: { name: "Experience", path: "/#experience" },
+  projects: { name: "Projects", path: "/#projects" },
+};
+
+// Common base classes
+const baseClasses = {
+  nav: "nav-links flex w-full justify-center gap-6 max-md:gap-3 max-md:py-6",
+  link: "px-2 py-2 transition-all hover:text-mint-300 max-md:mx-auto max-md:w-full max-md:px-6 max-md:py-2 ",
+  socialContainer: "flex items-center justify-center gap-5 md:hidden",
+  dropdown: "relative group flex items-center",
+  dropdownMenu:
+    "absolute left-0 top-full hidden group-hover:block bg-white dark:bg-zinc-800 shadow-lg rounded-md py-2 min-w-[200px] z-50",
+  dropdownItem:
+    "block px-4 py-2 text-sm hover:bg-mint-100 dark:hover:bg-zinc-700 transition-colors",
+} as const;
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const isHome = window.location.pathname === "/";
+
+    // Classes for link states
+    const linkClasses = {
+      active: [
+        "text-mint-500",
+        "dark:text-mint-400",
+        "font-bold",
+        "[text-shadow:1px_1px_11px_rgba(208,251,229,0.7)]",
+      ],
+      inactive: ["dark:text-zinc-300", "text-blacktext"],
+    };
+
+    function toggleLinkClasses(link: Element, isActive: boolean) {
+      if (isActive) {
+        link.classList.add(...linkClasses.active);
+        link.classList.remove(...linkClasses.inactive);
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.classList.remove(...linkClasses.active);
+        link.classList.add(...linkClasses.inactive);
+        link.removeAttribute("aria-current");
+      }
+    }
+
+    function updateActiveLink() {
+      const currentPath = window.location.pathname;
+      const currentHash = window.location.hash
+        ? `#${window.location.hash.substring(1)}`
+        : "";
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        const path = link.getAttribute("data-path");
+        toggleLinkClasses(link, path === currentPath || path === currentHash);
+      });
+    }
+
+    function setupScrollSpy() {
+      if (!isHome) return;
+
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll("nav a");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "-50% 0px",
+        threshold: 0,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.getAttribute("id");
+            if (sectionId) {
+              navLinks.forEach((link) => {
+                const path = link.getAttribute("data-path");
+                toggleLinkClasses(link, path === `/#${sectionId}`);
+              });
+            }
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => observer.observe(section));
+    }
+
+    updateActiveLink();
+    setupScrollSpy();
+    window.addEventListener("hashchange", updateActiveLink);
+  });
+</script>
+
+<nav class={baseClasses.nav} role="navigation" aria-label="Main Navigation">
+  {
+    items.map((key: string) => {
+      const item = menu[key as keyof typeof menu];
+      if (!item) return null;
+
+      if ("dropdown" in item) {
+        return (
+          <div class={baseClasses.dropdown}>
+            <a
+              href={item.path}
+              class={baseClasses.link}
+              data-path={item.path}
+              aria-label={item.name}
+              aria-current={
+                item.path === Astro.url.pathname ? "page" : undefined
+              }
+            >
+              {item.name}
+            </a>
+            <div class={baseClasses.dropdownMenu}>
+              {item.dropdown.map((dropdownItem) => (
+                <a
+                  href={dropdownItem.path}
+                  class={baseClasses.dropdownItem}
+                  data-path={dropdownItem.path}
+                  aria-label={dropdownItem.name}
+                >
+                  {dropdownItem.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <a
+          href={item.path}
+          class={baseClasses.link}
+          data-path={item.path}
+          aria-label={item.name}
+          aria-current={item.path === Astro.url.pathname ? "page" : undefined}
+        >
+          {item.name}
+        </a>
+      );
+    })
+  }
+
+  <div
+    class={baseClasses.socialContainer}
+    role="group"
+    aria-label="Social Media Links"
+  >
+    <Social link={github} iconName={githubIconName} />
+    <Social link={linkedin} iconName={linkedinIconName} />
+  </div>
+</nav>
