@@ -1,234 +1,201 @@
+# 🌟 Nasir Shahbaz - Personal Portfolio Website
 
-# NeonMint Template Documentation
+<div align="center">
 
-![neonmint](https://github.com/user-attachments/assets/ae539704-2292-492f-882c-c90595b34717)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://nstechbytes.pages.dev)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
+</div>
 
-## 🎯 Overview
+## 📖 Overview
 
-**NeonMint** is a minimalist and modern template designed for developers and digital creatives. Its dark-toned aesthetic with mint green accents offers a clean, elegant, and functional visual experience, ideal for portfolios, dashboards, or tech landing pages.
+A modern, responsive portfolio website showcasing my expertise in multiple programming languages including **C, C++, C#, Python, Java, HTML, CSS, Lua, and PowerShell**. Built with cutting-edge web technologies and featuring a stunning **GitHub Dark Theme** with **glassmorphism effects** and smooth animations.
 
-## 📁 Project Structure
+🔗 **[View Live Demo →](https://nstechbytes.pages.dev)**
 
-```bash
-└── 📁NeonMint
-    └── 📁public
-        ├── android-chrome-192x192.png
-        ├── android-chrome-512x512.png
-        ├── apple-touch-icon.png
-        ├── favicon-16x16.png
-        ├── favicon-32x32.png
-        ├── favicon.ico
-        └── 📁images
-            ├── 📁posts    # Post images
-            └── 📁projects # Project images
-        └── site.webmanifest # PWA configuration file
-    └── 📁src
-        ├── 📁components  # Reusable UI components
-        │   ├── 📁blog    # Blog components
-        │   ├── 📁layout  # Layout components
-        │   ├── 📁portfolio # Portfolio components
-        │   └── 📁ui      # UI components
-        ├── 📁icons       # Icons (.svg)
-        ├── 📁layouts     # Site layouts
-        │   ├── Layout.astro           # Main application layout
-        │   ├── MarkdownAbout.astro    # About-me page layout
-        │   ├── MarkdownPostLayout.astro # Posts page layout
-        │   └── ProjectLayout.astro    # Projects page layout
-        ├── 📁pages       # Site pages
-        │   ├── about-me.md            # About-me page
-        │   ├── 📁blog   # All posts page
-        │   │   ├── index.astro        # Blog home page
-        │   │   ├── 📁posts            # Blog posts
-        ├── │   ├── └── index.astro     # All posts page
-        │   │   ├── 📁tags             # Blog tags
-        │   │   └── 📁techs            # Blog technologies
-        │   ├── index.astro            # Home page
-        │   ├── 📁portfolio
-        │   │   └── 📁projects         # Portfolio projects
-        │   ├── robots.txt.ts          # robots.txt configuration
-        │   └── rss.xml.js             # RSS configuration
-        ├── 📁scripts
-        │   └── menu.js                # Menu script
-        ├── 📁styles
-        │   └── global.css             # Global styles
-        └── 📁utils
-            └── languages.ts           # Technology tools configuration
-    ├── .gitignore
-    ├── astro.config.mjs
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── tsconfig.json
-```
+---
 
-## 🛠️ Technology Stack
+## ✨ Features
 
-- **Framework**: Astro v5.6.1
-- **UI Library**: Preact v10.26.2
-- **Styling**: TailwindCSS v4.0.8
-- **Icons**: astro-icon v1.1.5
-- **Syntax Highlighting**: PrismJS v1.30.0
-- **Animations**: tailwindcss-animated v2.0.0
-- **Analytics**: @vercel/speed-insights v1.2.0
+- 🎨 **Modern UI/UX** - GitHub Dark Theme with neon glow effects and glassmorphism
+- ⌨️ **Dynamic Typing Animation** - Engaging header with typewriter effect
+- 📱 **Fully Responsive** - Optimized for all devices and screen sizes
+- 🎭 **Smooth Animations** - Framer Motion powered transitions and hover effects
+- ⚡ **Lightning Fast** - Built with Vite for optimal performance
+- 🔍 **SEO Optimized** - Meta tags and semantic HTML for better discoverability
+- ♿ **Accessible** - WCAG compliant components using Radix UI primitives
+- 🎯 **Type-Safe** - Full TypeScript implementation
 
-## ✨ Key Features
+---
 
-1. **🚀 Performance Optimized**
-   - Static site generation
-   - Partial hydration with Preact
-   - Optimized images and assets
+## 🛠️ Tech Stack
 
-2. **💻 Modern Development Experience**
-   - TypeScript support
-   - Hot module replacement
-   - ESLint integration
+### Core Technologies
 
-3. **🔍 SEO & Analytics**
-   - Built-in sitemap generation
-   - RSS feed support
-   - Vercel Speed Insights
+- **Framework:** [React 18.3](https://react.dev/) with TypeScript
+- **Build Tool:** [Vite 5.4](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS 3.4](https://tailwindcss.com/)
+- **Routing:** [React Router DOM](https://reactrouter.com/)
 
-4. **🎨 Styling & UI**
-   - TailwindCSS for utility-first styling
-   - Animated components
-   - Responsive design
-   - Dark mode support
+### UI & Components
+
+- **Component Library:** [Shadcn UI](https://ui.shadcn.com/) (Radix UI primitives)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Notifications:** [Sonner](https://sonner.emilkowal.ski/)
+- **Typewriter Effect:** [typewriter-effect](https://www.npmjs.com/package/typewriter-effect)
+
+### Form & Validation
+
+- **Form Management:** [React Hook Form](https://react-hook-form.com/)
+- **Schema Validation:** [Zod](https://zod.dev/)
+
+### Developer Tools
+
+- **Linting:** ESLint with React hooks plugin
+- **Build Optimization:** SWC compiler via Vite plugin
+- **CSS Processing:** PostCSS with Autoprefixer
+
+---
 
 ## 🚀 Getting Started
 
-1. **📦 Installation**
+### Prerequisites
 
-   ### 🚀**Astro Installation**
-   ```bash
-   npm create astro@latest -- --template EFEELE/neonmint
-   ```
-   or
-   ### 🔧**Manual Installation**
-   
-   #### Clone Repository
-   ```bash
-   git clone https://github.com/EFEELE/NeonMint.git
-   ```
-   #### Install Dependencies
-   ```bash
-   npm install
-   ```
+- **Node.js** (v18 or higher recommended)
+- **npm** or **bun** package manager
 
-  
+### Installation
 
-3. **⚡ Development**
-   ```bash
-   npm run dev
-   ```
+1. **Clone the repository**
 
-4. **🏗️ Build**
-   ```bash
-   npm run build
-   ```
+```bash
+git clone https://github.com/nstechbytes/nstechbytes-website.git
+cd nstechbytes-website
+```
 
-5. **👀 Preview**
-   ```bash
-   npm run preview
-   ```
+2. **Install dependencies**
 
-## ⚙️ Configuration
+```bash
+npm install
+# or
+bun install
+```
 
-The project is configured through several key files:
+3. **Start the development server**
 
-- `astro.config.mjs`: Main Astro configuration
-- `tailwind.config.js`: TailwindCSS configuration
-- `tsconfig.json`: TypeScript configuration
+```bash
+npm run dev
+```
+
+4. **Open your browser**
+
+Navigate to `http://localhost:5173` to view the website locally.
+
+---
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build for production |
+| `npm run build:dev` | Build in development mode |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint to check code quality |
+
+---
+
+## 📁 Project Structure
+
+```
+nstechbytes-website/
+├── src/
+│   ├── components/          # React components
+│   │   ├── ui/             # Shadcn UI components
+│   │   ├── Hero.tsx        # Hero section component
+│   │   ├── Navigation.tsx  # Navigation component
+│   │   └── VisualEffects.tsx # Visual effects component
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # Utility functions
+│   ├── pages/              # Page components
+│   │   ├── Index.tsx       # Home page
+│   │   └── NotFound.tsx    # 404 page
+│   ├── App.tsx             # Main App component
+│   ├── main.tsx            # Application entry point
+│   └── index.css           # Global styles
+├── public/                  # Static assets
+├── index.html              # HTML template
+├── vite.config.ts          # Vite configuration
+├── tailwind.config.ts      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Project dependencies
+```
+
+---
 
 ## 🎨 Customization
 
-### 📄 Adding New Pages
+### Updating Content
 
-Create new `.astro` files in the `src/pages` directory. The file name will determine the route.
+- Edit `src/pages/Index.tsx` to modify the main content
+- Update `src/components/Hero.tsx` for hero section changes
+- Customize colors in `tailwind.config.ts`
 
-### 🔧 Adding New Languages or Technologies
-
-To incorporate a new programming language or technological tool into the site's capsules, follow these steps:
-
-1. **🖼️ Add the SVG icon**: Place the SVG file of the language or tool in the `src/icons` folder.
-
-        > **💡 Recommendation**: For SVG icons, I recommend using [SVGL](https://svgl.app/), an excellent library of high-quality vectors that offers optimized icons for most popular languages and technologies.
-
-2. **📝 Register the language**: Open the `utils/languages.ts` file and add a new entry to the languages object following this format:
-
-   ```typescript
-   html: {
-       name: "HTML 5",
-       iconName: "html",
-   },
-   ```
-
-   Where:
-   - `html`: Is the unique identifier for the language
-   - `name`: Is the name that will be displayed visibly in the interface
-   - `iconName`: Is the name of the SVG file without the extension (must match exactly with the file name in `src/icons`)
-
-Once these steps are completed, the new language or technology will be available for use in the site's capsules. You can select it when creating or editing projects or posts, and the corresponding icon will be displayed correctly in the interface.
-
-If you encounter any issues during this process, try restarting the development server. In some cases, changes to configuration files or static resources require a restart to be detected correctly.
-
-To verify that the new language has been added correctly, check the list of available technologies in the user interface after restarting the server.
-
----
-
-### 🧷 Favicon Setup
-
-To customize your site's favicon and web app icons, you can generate all the necessary variants using [favicon.io](https://favicon.io/favicon-converter/). Upload your logo or icon, and the tool will create a full set of optimized files for various devices and platforms.
-
-Place the generated files in the `📂 public` directory as follows:
+### Adding New Components
 
 ```bash
-📂 public
-├── 📄 android-chrome-192x192.png
-├── 📄 android-chrome-512x512.png
-├── 📄 apple-touch-icon.png
-├── 📄 favicon-16x16.png
-├── 📄 favicon-32x32.png
-├── 📄 favicon.ico
-└── 📄 site.webmanifest
+# Add Shadcn UI components
+npx shadcn@latest add [component-name]
 ```
-
-> 💡 Don’t forget to update the contents of `site.webmanifest` to match your app’s name, description, and theme color for a complete PWA experience.
 
 ---
 
-### 🎨 Styling
+## 🌐 Deployment
 
-- Use TailwindCSS classes for styling
-- Add custom styles in `src/styles/global.css`
+This project is deployed on **Cloudflare Pages**. Any push to the main branch automatically triggers a new deployment.
 
-### 🧩 Components
+### Deploy Your Own
 
-- Create reusable components in `src/components`
-- Import icons using `astro-icon`
+1. Fork this repository
+2. Connect your GitHub account to Cloudflare Pages
+3. Select the repository and configure:
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+4. Deploy!
 
-## 🚀 Deployment
-
-The site is configured for deployment on Vercel, but can be deployed to any static hosting service.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 👥 Contributors  
-
-A huge thanks to all the amazing people who have contributed to this project!  
-Your time, effort, and ideas make this repository better every day. 💚  
-
-<a href="https://github.com/EFEELE/NeonMint/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=EFEELE/NeonMint" />
-</a>
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is open source and available under the [MIT License](LICENSE).
 
+---
+
+## 👤 Author
+
+**Nasir Shahbaz** (nstechbytes)
+
+- GitHub: [@nstechbytes](https://github.com/nstechbytes)
+- Email: nstechbytes@gmail.com
+- Website: [nstechbytes.pages.dev](https://nstechbytes.pages.dev)
+
+---
+
+## 🙏 Acknowledgments
+
+- [Shadcn UI](https://ui.shadcn.com/) for the amazing component library
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [Vite](https://vitejs.dev/) for the blazing-fast build tool
+- [Cloudflare Pages](https://pages.cloudflare.com/) for reliable hosting
+
+---
+
+<div align="center">
+
+**⭐ If you like this project, please consider giving it a star!**
+
+</div>
